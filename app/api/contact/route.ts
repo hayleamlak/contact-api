@@ -8,8 +8,6 @@ export async function POST(req: Request) {
     if (!name || !email || !message) {
       return NextResponse.json({ message: "All fields are required." }, { status: 400 });
     }
-
-    // Configure Gmail transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -18,7 +16,6 @@ export async function POST(req: Request) {
       },
     });
 
-    // Send the email
     await transporter.sendMail({
       from: email,
       to: process.env.EMAIL_TO,
