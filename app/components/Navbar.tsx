@@ -7,7 +7,7 @@ export default function Navbar() {
       <div className="text-xl font-bold">My Portfolio</div>
       <div className="space-x-6">
         <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
+      
      
         <Link href="/contact">Contact</Link>
       </div>
